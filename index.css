@@ -5,33 +5,40 @@
     overflow-x: hidden;
 }
 header{
-    background-image: url('./images/beach3.jpg');
-    height:100vh;
-    width:100%;
-    background-position: center;
-    background-size: cover;
     position: relative;
+    box-sizing: inherit;
+    display: block;
+    margin-bottom: 50px;
+}
+header>img{
+    width: 100%;
 }
 .innerContainer{
     width: 60%;
     background-color: rgba(255, 204, 0, 0.499);
     position: absolute;
-    bottom: 20px;
+    bottom: 90px;
     left: 0;
     padding:10px
 }
 .innerContainer:hover{
     background-color: rgba(255, 119, 0, 0.4);;
 }
-main{
-    width: 96%;
+main>div{
+    width: 90%;
     display: grid;
     gap:5px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin:2%;
 }
-img{
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.pieceofrow>img{
     border-top: 5px solid rgb(255, 149, 0);
     width: 95%;
     object-fit: cover;
@@ -46,8 +53,11 @@ h2{
     .innerContainer{
         display: none;
     }
-    main{
+    main>div{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
+    }
+    .pieceofrow>img{
+        width: 100%;
     }
 }
